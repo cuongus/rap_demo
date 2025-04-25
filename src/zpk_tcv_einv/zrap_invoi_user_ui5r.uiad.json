@@ -1,0 +1,33 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Config Username",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zrapeinvoiceuser"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_4419605D3EBF6976087A7160CCE9745BBE9DFFB1_TM",
+    "semanticObject": "zrap_invoi_user",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_4419605D3EBF6976087A7160CCE9745BBE9DFFB1_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Config Username"
+      }
+    }
+  ]
+}

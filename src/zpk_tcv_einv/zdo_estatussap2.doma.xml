@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DOMA" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD01V>
+    <DOMNAME>ZDO_ESTATUSSAP2</DOMNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <DATATYPE>CHAR</DATATYPE>
+    <LENG>000002</LENG>
+    <OUTPUTLEN>000002</OUTPUTLEN>
+    <VALEXI>X</VALEXI>
+    <DDTEXT>Status sap</DDTEXT>
+    <DOMMASTER>E</DOMMASTER>
+   </DD01V>
+   <DD07V_TAB>
+    <DD07V>
+     <DOMNAME>ZDO_ESTATUSSAP2</DOMNAME>
+     <VALPOS>0001</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>01</DOMVALUE_L>
+     <DDTEXT>Lập</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZDO_ESTATUSSAP2</DOMNAME>
+     <VALPOS>0002</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>02</DOMVALUE_L>
+     <DDTEXT>Đã lập hóa đơn nháp</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZDO_ESTATUSSAP2</DOMNAME>
+     <VALPOS>0003</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>03</DOMVALUE_L>
+     <DDTEXT>Lỗi tích hợp</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZDO_ESTATUSSAP2</DOMNAME>
+     <VALPOS>0004</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>04</DOMVALUE_L>
+     <DDTEXT>Hóa đơn đã bị hủy</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZDO_ESTATUSSAP2</DOMNAME>
+     <VALPOS>0005</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>06</DOMVALUE_L>
+     <DDTEXT>Hóa đơn đã bị điều chỉnh</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZDO_ESTATUSSAP2</DOMNAME>
+     <VALPOS>0006</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>07</DOMVALUE_L>
+     <DDTEXT>Hóa đơn đã bị thay thế</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZDO_ESTATUSSAP2</DOMNAME>
+     <VALPOS>0007</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>10</DOMVALUE_L>
+     <DDTEXT>CQT từ chối</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZDO_ESTATUSSAP2</DOMNAME>
+     <VALPOS>0008</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>98</DOMVALUE_L>
+     <DDTEXT>Đã phát hành hóa đơn</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZDO_ESTATUSSAP2</DOMNAME>
+     <VALPOS>0009</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>99</DOMVALUE_L>
+     <DDTEXT>Đã phát hành hóa đơn thành công</DDTEXT>
+    </DD07V>
+   </DD07V_TAB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

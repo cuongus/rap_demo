@@ -1,0 +1,51 @@
+managed implementation in class ZBP_R_TB_CONFIG_ROUTE unique;
+strict ( 2 );
+with draft;
+define behavior for ZR_TB_CONFIG_ROUTE alias ZrTbConfigRoute
+persistent table ZTB_CONFIG_ROUTE
+draft table ZTB_CONFIG001_D
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+
+{
+  field ( mandatory : create )
+   UriAuth,
+   UriSendPayment;
+
+  field ( readonly )
+   CreatedBy,
+   LastChangedAt,
+   LastChangedBy,
+   LocalLastChangedBy,
+   LocalLastChangedAt,
+   CreatedAt;
+
+  field ( readonly : update )
+   UriAuth,
+   UriSendPayment;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZTB_CONFIG_ROUTE
+  {
+    UriAuth = uri_auth;
+    UriSendPayment = uri_send_payment;
+    Status = status;
+    CreatedAt = created_at;
+    CreatedBy = created_by;
+    LastChangedAt = last_changed_at;
+    LastChangedBy = last_changed_by;
+    LocalLastChangedBy = local_last_changed_by;
+    LocalLastChangedAt = local_last_changed_at;
+  }
+}

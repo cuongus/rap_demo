@@ -1,0 +1,11 @@
+@EndUserText.label: 'Service Definition for EInvoice'
+define service Zsd_einvoice_app {
+  expose ZCS_RAP_EINV_ENTRY  as CSEInvoiceEntry;
+  expose ZCS_RAP_EINV_ITEM   as CSEInvoiceItem;
+  expose ZC_RAP_INV_USER     as EInvoiceUser;
+  expose ZC_RAP_INV_SERIAL   as EInvoiceSerial;
+  expose ZC_RAP_EINV_PAYM_2  as EInvoicePayment;
+  expose ZI_SH_DOCUMENRT_ADJ as SHDocumentAdj;
+  expose I_CompanyCodeStdVH  as Companycode;
+  expose I_Customer          as Customer;
+}

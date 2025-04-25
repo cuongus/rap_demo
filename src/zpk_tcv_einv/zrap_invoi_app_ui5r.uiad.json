@@ -1,0 +1,33 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Integration EInvoices",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zrapeinvoiceapp"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_096C3AFE96679A77A564155035F807AF65B85E34_TM",
+    "semanticObject": "zrap_invoice_app",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_096C3AFE96679A77A564155035F807AF65B85E34_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Integration EInvoices"
+      }
+    }
+  ]
+}

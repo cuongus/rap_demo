@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_TB_TCV_API_KEY000'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_TB_TCV_API_KEY000'
+  }
+}
+define service ZUI_TB_TCV_API_KEY000_O4 provider contracts odata_v4_ui {
+  expose ZC_TB_TCV_API_KEY000;
+}

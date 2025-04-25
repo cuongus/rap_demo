@@ -1,0 +1,33 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Config Payment method",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zrapeinvoicepaym"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_01170E00108CF8B33E1E8309F570930B6DF85296_TM",
+    "semanticObject": "zrap_invoi_paym",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_01170E00108CF8B33E1E8309F570930B6DF85296_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Config Payment method"
+      }
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+@Metadata.layer: #CORE
+@UI:{
+    headerInfo: { typeName: 'Log API AUTH Bank',
+                  typeNamePlural: 'Log API AUTH Bank',
+                  title: { type: #STANDARD, label: 'Payment', value: 'Guid' },
+                  description: { value: 'Createdby'}
+    },
+    presentationVariant: [{ sortOrder: [{ by: 'Createddat', direction: #DESC }, { by: 'Createdtime', direction: #DESC }] }]
+}
+annotate view ZC_RAP_LOG_TCVBANK with
+{
+
+  @UI.facet          : [{id : 'General',
+           purpose: #STANDARD,
+           position: 10,
+           label : 'General',
+           type  : #IDENTIFICATION_REFERENCE
+           }
+           ]
+  @UI.lineItem       : [{ position: 10 }]
+  @UI.identification : [{ position: 10 }]
+  @EndUserText.label: 'Gui ID'
+  Guid;
+  @UI.lineItem       : [{ position: 20 }]
+  @UI.identification : [{ position: 20 }]
+  @EndUserText.label: 'Integrated By'
+  Createdby;
+
+  @UI.lineItem       : [{ position: 30 }]
+  @UI.identification : [{ position: 30 }]
+  @EndUserText.label: 'Integrated Time'
+  Createdtime;
+
+  @UI.lineItem       : [{ position: 40 }]
+  @UI.identification : [{ position: 40 }]
+  @EndUserText.label: 'Integrated Date'
+  Createddat;
+
+  @UI.hidden: true
+  Username;
+  @UI.hidden: true
+  Password;
+
+  @UI.lineItem       : [{ position: 80 }]
+  @UI.identification : [{ position: 80 }]
+  @EndUserText.label: 'CommScenario'
+  CommScenario;
+
+  @UI.lineItem       : [{ position: 90 }]
+  @UI.identification : [{ position: 90 }]
+  @EndUserText.label: 'ServiceId'
+  ServiceId;
+
+  @UI.lineItem       : [{ position: 50 }]
+  @UI.identification : [{ position: 50 }]
+  @EndUserText.label: 'Link API'
+  Link;
+
+  @UI.lineItem       : [{ position: 60 }]
+  @UI.identification : [{ position: 60 }]
+  @EndUserText.label: 'Response'
+  Response;
+
+  @UI.lineItem       : [{ position: 70 }]
+  @UI.identification : [{ position: 70 }]
+  @EndUserText.label: 'Status'
+  Type;
+}

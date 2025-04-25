@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition for Onetime Customer'
+define service Zsd_onetime_cus {
+  expose ZC_ONETIME_CUS;
+}

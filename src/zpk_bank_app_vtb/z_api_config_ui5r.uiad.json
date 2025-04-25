@@ -1,0 +1,33 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Config API",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zapiconfig"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_413E745D4AE632AB6BFE2AAED9E0AE8ECD440530_TM",
+    "semanticObject": "z_api_config",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_413E745D4AE632AB6BFE2AAED9E0AE8ECD440530_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Config API"
+      }
+    }
+  ]
+}

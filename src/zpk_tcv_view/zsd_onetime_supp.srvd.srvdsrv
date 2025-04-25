@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition for Onetime Supplier'
+define service Zsd_onetime_supp {
+  expose ZC_ONTIME_SUPP;
+}

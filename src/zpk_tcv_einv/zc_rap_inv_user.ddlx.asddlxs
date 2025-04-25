@@ -1,0 +1,59 @@
+@Metadata.layer: #CORE
+@UI: {
+      headerInfo:{ typeName: 'Username',
+                   typeNamePlural: 'Username',
+                   title: { type: #STANDARD, label: 'Username', value: 'Username' }
+                  },
+      presentationVariant: [{ sortOrder: [{ by: 'Usertype', direction: #ASC }] }]
+}
+annotate view ZC_RAP_INV_USER with
+{
+  @UI.facet: [
+  {
+  id: 'Username',
+  purpose: #STANDARD,
+  type: #IDENTIFICATION_REFERENCE,
+  label: 'Username',
+  position: 10
+  },
+  {
+  id: 'FormSerial',
+  purpose: #STANDARD,
+  type: #LINEITEM_REFERENCE,
+  label: 'Form Serial',
+  position: 20,
+  targetElement: '_EInvoiceSerial'
+  }
+  ]
+
+  @UI.identification: [{ position: 10 }]
+  @UI.lineItem: [{ position: 10 }]
+  @UI.selectionField: [{ position: 10 }]
+  @Consumption.valueHelpDefinition: [
+    { entity           : { name: 'I_CompanyCodeStdVH', element: 'CompanyCode' }
+    }]
+  @Consumption.filter: { mandatory:  true , defaultValue: '6710'}
+  Companycode;
+  @UI.identification: [{ position: 20 }]
+  @UI.lineItem: [{ position: 20 }]
+  @UI.selectionField: [{ position: 20 }]
+  @Consumption.filter: { mandatory:  true, selectionType: #SINGLE }
+  Usertype;
+  @UI.identification: [{ position: 30 }]
+  @UI.lineItem: [{ position: 30 }]
+  Username;
+  @UI.identification: [{ position: 40 }]
+  @UI.lineItem: [{ position: 40 }]
+  Maskpassword;
+//  Password;
+  @UI.identification: [{ position: 50 }]
+  @UI.lineItem: [{ position: 50 }]
+  Sellertax;
+  @UI.hidden: true
+  Locallastchangedby;
+  @UI.hidden: true
+  Locallastchangedat;
+  @UI.hidden: true
+  Lastchangedat;
+
+}

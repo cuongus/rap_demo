@@ -1,0 +1,96 @@
+@Metadata.layer: #CORE
+@UI:{
+    headerInfo: { typeName: 'EInvoices Items',
+                  typeNamePlural: 'EInvoices Items',
+                  title: { type: #STANDARD, label: 'Items', value: 'buzei' },
+                  description: { value: 'buzei'}
+    },
+    presentationVariant: [{ sortOrder: [{ by: 'buzei', direction: #ASC }] }]
+}
+annotate entity ZCS_RAP_EINV_ITEM with
+{
+  @UI.facet          : [
+  {id                : 'Items',
+  purpose            : #STANDARD,
+  position           : 10,
+  label              : 'Items',
+  type               : #IDENTIFICATION_REFERENCE
+  }
+  ]
+  @UI.hidden         : true
+  companycode;
+  @UI.hidden         : true
+  accountingdocument;
+  @UI.hidden         : true
+  fiscalyear;
+  @UI.lineItem       : [{ position: 10 }]
+  @UI.identification : [{ position: 10 }]
+  buzei;
+  @UI.lineItem       : [{ position: 20 }]
+  @UI.identification : [{ position: 20 }]
+  material;
+  @UI.lineItem       : [{ position: 30 }]
+  @UI.identification : [{ position: 30 }]
+  itemname;
+  //      @UI.lineItem       : [{ position: 40 }]
+  //      @UI.identification : [{ position: 40 }]
+  @UI.hidden         : true
+  noted;
+  @UI.lineItem       : [{ position: 50 }]
+  @UI.identification : [{ position: 50 }]
+  taxcode;
+  @UI.lineItem       : [{ position: 60 }]
+  @UI.identification : [{ position: 60 }]
+  taxpercentage;
+  @UI.lineItem       : [{ position: 70 }]
+  @UI.identification : [{ position: 70 }]
+  quantity;
+  @UI.lineItem       : [{ position: 80 }]
+  @UI.identification : [{ position: 80 }]
+  baseunit;
+  @UI.lineItem       : [{ position: 90 }]
+  @UI.identification : [{ position: 90 }]
+  unittext;
+  @UI.lineItem       : [{ position: 100 }]
+  @UI.identification : [{ position: 100 }]
+  @EndUserText.label: 'Currency Price'
+  price;
+  @UI.lineItem       : [{ position: 110 }]
+  @UI.identification : [{ position: 110 }]
+  currency;
+  @UI.lineItem       : [{ position: 120 }]
+  @UI.identification : [{ position: 120 }]
+  @EndUserText.label: 'Currency Amount'
+  amount;
+  @UI.lineItem       : [{ position: 130 }]
+  @UI.identification : [{ position: 130 }]
+  @EndUserText.label: 'Currency VAT'
+  vat;
+  @UI.lineItem       : [{ position: 140 }]
+  @UI.identification : [{ position: 140 }]
+  @EndUserText.label: 'Currency Total'
+  total;
+  @UI.lineItem       : [{ position: 150 }]
+  @UI.identification : [{ position: 150 }]
+  @EndUserText.label: 'Local Price'
+  pricev;
+  @UI.lineItem       : [{ position: 160 }]
+  @UI.identification : [{ position: 160 }]
+  @EndUserText.label: 'Local Amount'
+  amountv;
+  @UI.lineItem       : [{ position: 170 }]
+  @UI.identification : [{ position: 170 }]
+  @EndUserText.label: 'Local VAT'
+  vatv;
+  @UI.lineItem       : [{ position: 180 }]
+  @UI.identification : [{ position: 180 }]
+  @EndUserText.label: 'Local Total'
+  totalv;
+  @UI.hidden         : true
+  locallastchangedby;
+  @UI.hidden         : true
+  locallastchangedat;
+  @UI.hidden         : true
+  lastchangedat;
+
+}

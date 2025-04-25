@@ -1,0 +1,394 @@
+@Metadata.layer: #CORE
+@UI:{
+    headerInfo: { typeName: 'General',
+                  typeNamePlural: 'EInvoices General',
+                  title: { value: 'accountingdocument' }
+    },
+    presentationVariant: [{ sortOrder: [{ by: 'accountingdocument', direction: #ASC }] }]
+}
+
+annotate entity ZCS_RAP_EINV_ENTRY with
+{
+  @UI.facet          : [
+   {
+   id                 : 'General',
+   purpose            : #STANDARD,
+   position           : 10,
+   isPartOfPreview    : true,
+   label              : 'General',
+   type               : #COLLECTION,
+   targetQualifier    : 'General'
+   },
+   {
+   id                 : 'BasicInfo',
+   purpose            : #STANDARD,
+   parentId           : 'General',
+   position           : 10,
+   isPartOfPreview    : true,
+   label              : 'Basic Info',
+   type               : #FIELDGROUP_REFERENCE,
+   targetQualifier    : 'QFBasicInfo'
+   },
+   {
+   id                 : 'Items',
+   purpose            : #STANDARD,
+   type               : #LINEITEM_REFERENCE,
+   label              : 'Items',
+   position           : 20,
+   targetElement      : '_EInvoiceItems'
+   }
+   ]
+
+  @UI.selectionField : [{ position: 20 }]
+  @UI.lineItem       : [{ position: 30  },{ label: 'Integration Invoices', dataAction: 'InteEINV', type: #FOR_ACTION }
+                                                           ,{ label: 'Update Status Invoices', dataAction: 'SearchEINV', type: #FOR_ACTION }
+                                                           ,{ label: 'Replace Invoices', dataAction: 'ReplaceEINV', type: #FOR_ACTION }
+                                                           ,{ label: 'Adjust Invoices', dataAction: 'AdjustEINV', type: #FOR_ACTION }
+                                                           ,{ label: 'Cancel Invoices', dataAction: 'CancelEINV', type: #FOR_ACTION }
+  //                                                               ,{ label: 'Edit', dataAction: 'editItems', type: #FOR_ACTION }
+                                                            ]
+  @UI.identification : [{ position: 30  },{ label: 'Integration Invoices', dataAction: 'InteEINV', type: #FOR_ACTION }
+                                                           ,{ label: 'Update Status Invoices', dataAction: 'SearchEINV', type: #FOR_ACTION }
+                                                           ,{ label: 'Replace Invoices', dataAction: 'ReplaceEINV', type: #FOR_ACTION }
+                                                           ,{ label: 'Adjust Invoices', dataAction: 'AdjustEINV', type: #FOR_ACTION }
+                                                           ,{ label: 'Cancel Invoices', dataAction: 'CancelEINV', type: #FOR_ACTION }
+  //                                                               ,{ label: 'Edit', dataAction: 'editItems', type: #FOR_ACTION }
+                                                            ]
+  @UI.fieldGroup     : [ { type: #STANDARD,  position: 30 ,  qualifier: 'QFBasicInfo'  }]
+  @Search.defaultSearchElement: true
+  companycode;
+
+  @UI.selectionField : [{ position: 70 }]
+  @UI.lineItem       : [{ position: 40  }]
+  @UI.identification : [{ position: 40  }]
+  @UI.fieldGroup     : [ { type: #STANDARD,  position: 40 ,  qualifier: 'QFBasicInfo'  }]
+  @Search.defaultSearchElement: true
+  accountingdocument;
+
+  @UI.selectionField : [{ position: 30 }]
+  @UI.lineItem       : [{ position: 50  }]
+  @UI.identification : [{ position: 50  }]
+  @UI.fieldGroup     : [ { type: #STANDARD,  position: 50 ,  qualifier: 'QFBasicInfo'  }]
+  fiscalyear;
+
+  //  @UI.lineItem       : [{ position: 10,value: 'zsymbol', criticality: 'iconsap' }]
+  //  @EndUserText.label : 'Icon'
+
+  @UI.hidden         : true
+  iconsap;
+
+  @UI.selectionField : [{ position: 10 }]
+  @UI.lineItem       : [{ position: 20  }]
+  @UI.identification : [{ position: 20  }]
+  statussap;
+
+  @UI.selectionField : [{ position: 60 }]
+  @UI.lineItem       : [{ position: 60 }]
+  @UI.identification : [{ position: 60 }]
+  FiscalPeriod;
+
+  @UI.selectionField : [{ position: 80 }]
+  @UI.lineItem       : [{ position: 70  }]
+  @UI.identification : [{ position: 70  }]
+  postingdate;
+
+  @UI.selectionField : [{ position: 90 }]
+  @UI.lineItem       : [{ position: 80  }]
+  @UI.identification : [{ position: 80  }]
+  documentdate;
+
+  @UI.lineItem       : [{ position: 90  }]
+  @UI.identification : [{ position: 90  }]
+  entrydate;
+
+  @UI.lineItem       : [{ position: 100  }]
+  @UI.identification : [{ position: 100  }]
+  doctype;
+
+  @UI.lineItem       : [{ position: 110  }]
+  @UI.identification : [{ position: 110  }]
+  @Consumption.filter.hidden: true
+  exchangerate;
+
+  @UI.lineItem       : [{ position: 120  }]
+  @UI.identification : [{ position: 120  }]
+  @Consumption.filter.hidden: true
+  taxcode;
+
+  @UI.lineItem       : [{ position: 130  }]
+  @UI.identification : [{ position: 130  }]
+  @UI.selectionField : [{ position: 130 }]
+  @UI.fieldGroup     : [ { type: #STANDARD,  position: 130 ,  qualifier: 'QFBasicInfo'  }]
+  customer;
+
+  @UI.lineItem       : [{ position: 140  }]
+  @UI.identification : [{ position: 140  }]
+  @UI.fieldGroup     : [ { type: #STANDARD,  position: 140 ,  qualifier: 'QFBasicInfo'  }]
+  @EndUserText.label : 'Customer Name'
+  @Consumption.filter.hidden: true
+  bname;
+
+  @UI.lineItem       : [{ position: 150  }]
+  @UI.identification : [{ position: 150  }]
+  @UI.fieldGroup     : [ { type: #STANDARD,  position: 150 ,  qualifier: 'QFBasicInfo'  }]
+  @EndUserText.label : 'Address'
+  @Consumption.filter.hidden: true
+  baddr;
+
+  @UI.hidden         : true
+  bbank;
+
+  @UI.hidden         : true
+  bacct;
+
+  @UI.lineItem       : [{ position: 160  }]
+  @UI.identification : [{ position: 160  }]
+  @UI.fieldGroup     : [ { type: #STANDARD,  position: 160 ,  qualifier: 'QFBasicInfo'  }]
+  @EndUserText.label : 'Customer Tax'
+  @Consumption.filter.hidden: true
+  btax;
+
+  @UI.lineItem       : [{ position: 170 }]
+  @UI.identification : [{ position: 170 }]
+  @EndUserText.label : 'Mail'
+  @Consumption.filter.hidden: true
+  bmail;
+
+  @UI.lineItem       : [{ position: 180 }]
+  @UI.identification : [{ position: 180 }]
+  @EndUserText.label : 'Telephone Number'
+  @Consumption.filter.hidden: true
+  btel;
+
+  //  @UI.lineItem       : [{ position: 190 }]
+  @UI.selectionField : [{ position: 40 }]
+  //  @UI.identification : [{ position: 190 }]
+  //  @EndUserText.label : 'Region'
+  region;
+
+  @UI.lineItem       : [{ position: 200 }]
+  @UI.identification : [{ position: 200 }]
+  @EndUserText.label : 'Profit Center'
+  profitcenter;
+
+  @UI.lineItem       : [{ position: 210 }]
+  //  @UI.selectionField : [{ position: 50 }]
+  @UI.identification : [{ position: 210 }]
+  @EndUserText.label : 'User type'
+  usertype;
+
+  @UI.hidden         : true
+  regiontext;
+
+  @UI.hidden         : true
+  usertypetext;
+
+  @UI.lineItem       : [{ position: 220  }]
+  @UI.identification : [{ position: 220  }]
+  @Consumption.filter.hidden: true
+  form;
+
+  @UI.lineItem       : [{ position: 230  }]
+  @UI.identification : [{ position: 230  }]
+  @UI.fieldGroup     : [ { type: #STANDARD,  position: 230 ,  qualifier: 'QFBasicInfo'  }]
+  @Consumption.filter.hidden: true
+  serial;
+
+  @UI.lineItem       : [{ position: 240  }]
+  @UI.identification : [{ position: 240  }]
+  @UI.fieldGroup     : [ { type: #STANDARD,  position: 240 ,  qualifier: 'QFBasicInfo'  }]
+  seq;
+
+  //  @UI.lineItem       : [{ position: 230  }]
+  //  @UI.identification : [{ position: 230  }]
+  //  @EndUserText.label : 'Date Integration'
+  //  @Consumption.filter.hidden: true
+  @UI.hidden         : true
+  dateint;
+
+  @UI.lineItem       : [{ position: 250  }]
+  @UI.identification : [{ position: 250  }]
+  @EndUserText.label : 'Date Issuance'
+  @Consumption.filter.hidden: true
+  dateiss;
+
+  //      @UI.lineItem       : [{ position: 270 }]
+  //      @UI.identification : [{ position: 270 }]
+  //      @UI.fieldGroup     : [ { type: #STANDARD,  position: 270 ,  qualifier: 'QFBasicInfo'  }]
+  //      @EndUserText.label : 'Time Issuance'
+  @UI.hidden         : true
+  timeiss;
+
+  //  @UI.lineItem       : [{ position: 260 }]
+  //  @UI.identification : [{ position: 260 }]
+  //  @EndUserText.label : 'Date Cancel'
+  //  @Consumption.filter.hidden: true
+  @UI.hidden: true
+  datecanc;
+
+  @UI.lineItem       : [{ position: 270 }]
+  @UI.identification : [{ position: 270 }]
+  @EndUserText.label : 'Key'
+  @Consumption.filter.hidden: true
+  sid;
+
+  //      @UI.lineItem       : [{ position: 300 }]
+  //      @UI.identification : [{ position: 300 }]
+  //      @EndUserText.label : 'Mapping to Sap'
+  @UI.hidden         : true
+  zsearch;
+
+  @UI.hidden         : true
+  zreplace;
+
+  //      @UI.lineItem       : [{ position: 310 }]
+  //      @UI.identification : [{ position: 310 }]
+  @UI.hidden         : true
+  startdat;
+
+  //      @UI.lineItem       : [{ position: 320 }]
+  //      @UI.identification : [{ position: 320 }]
+  @UI.hidden         : true
+  enddat;
+
+  @UI.lineItem       : [{ position: 280 }]
+  @UI.identification : [{ position: 280 }]
+  @Consumption.filter.hidden: true
+  stax;
+
+  @UI.lineItem       : [{ position: 290 }]
+  @UI.identification : [{ position: 290 }]
+  @Consumption.filter.hidden: true
+  mscqt;
+
+  @UI.lineItem       : [{ position: 300 }]
+  @UI.identification : [{ position: 300 }]
+  @Consumption.filter.hidden: true
+  link;
+
+  @UI.lineItem       : [{ position: 310 }]
+  @UI.identification : [{ position: 310 }]
+  adjtype;
+
+  @UI.hidden: true
+  adjtext;
+
+  @UI.lineItem       : [{ position: 320  }]
+  @UI.identification : [{ position: 320  }]
+  @EndUserText.label: 'Document Number Source'
+  @Consumption.filter.hidden: true
+  belnrsrc;
+
+  @UI.lineItem       : [{ position: 330  }]
+  @UI.identification : [{ position: 330  }]
+  @EndUserText.label: 'Fiscal Year Source'
+  @Consumption.filter.hidden: true
+  gjahrsrc;
+
+  //      statussap          : zde_estatussap;
+
+  @UI.lineItem       : [{ position: 340 }]
+  @UI.identification : [{ position: 340 }]
+  @Consumption.filter.hidden: true
+  statusinv;
+
+  @UI.lineItem       : [{ position: 350 }]
+  @UI.identification : [{ position: 350 }]
+  @Consumption.filter.hidden: true
+  statuscqt;
+
+  @UI.lineItem       : [{ position: 360  }]
+  @UI.identification : [{ position: 360  }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Message Type'
+  msgty;
+
+  @UI.lineItem       : [{ position: 370  }]
+  @UI.identification : [{ position: 370  }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Message Text'
+  msgtx;
+
+  @UI.lineItem       : [{ position: 380 }]
+  @UI.identification : [{ position: 380 }]
+  @Consumption.filter.hidden: true
+  paym;
+
+  @UI.lineItem       : [{ position: 390  }]
+  @UI.identification : [{ position: 390  }]
+  currency;
+
+  @UI.lineItem       : [{ position: 400  }]
+  @UI.identification : [{ position: 400  }]
+  @EndUserText.label: 'Currency Amount'
+  @Consumption.filter.hidden: true
+  amount;
+
+  @UI.lineItem       : [{ position: 410  }]
+  @UI.identification : [{ position: 410  }]
+  @EndUserText.label: 'Currency VAT'
+  @Consumption.filter.hidden: true
+  vat;
+
+  @UI.lineItem       : [{ position: 420  }]
+  @UI.identification : [{ position: 420  }]
+  @EndUserText.label: 'Currency Total'
+  @Consumption.filter.hidden: true
+  total;
+
+  @UI.lineItem       : [{ position: 430 }]
+  @UI.identification : [{ position: 430 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Local Amount'
+  amountv;
+
+  @UI.lineItem       : [{ position: 440 }]
+  @UI.identification : [{ position: 440 }]
+  @EndUserText.label: 'Local VAT'
+  @Consumption.filter.hidden: true
+  vatv;
+
+  @UI.lineItem       : [{ position: 450 }]
+  @UI.identification : [{ position: 450 }]
+  @EndUserText.label: 'Local Total'
+  @Consumption.filter.hidden: true
+  totalv;
+
+  @UI.hidden         : true
+  invdat;
+  @UI.hidden         : true
+  createdby;
+  @UI.hidden         : true
+  createdon;
+  @UI.hidden         : true
+  stblg;
+  @UI.hidden         : true
+  stjah;
+  //  @UI.hidden         : true
+  //  @UI.lineItem       : [{ position: 460 }]
+  //  @UI.identification : [{ position: 450 }]
+  @EndUserText.label: 'Reversing'
+  xreversing;
+  //  @UI.hidden         : true
+  //  @UI.lineItem       : [{ position: 470 }]
+  //  @UI.identification : [{ position: 450 }]
+  @EndUserText.label: 'Reversed'
+  xreversed;
+  @UI.hidden         : true
+  locallastchangedby;
+  @UI.hidden         : true
+  locallastchangedat;
+  @UI.hidden         : true
+  lastchangedat;
+
+  @UI.lineItem       : [{ position: 480 }]
+  @UI.identification : [{ position: 480 }]
+  @EndUserText.label: 'Accounting Document Item'
+  documentitem;
+
+  @UI.lineItem       : [{ position: 490 }]
+  @UI.identification : [{ position: 490 }]
+  @EndUserText.label: 'Date type'
+  datetype;
+
+}

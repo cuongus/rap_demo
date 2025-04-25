@@ -1,0 +1,314 @@
+@Metadata.layer: #CORE
+@UI:{
+    headerInfo: { typeName: 'General',
+                  typeNamePlural: 'Business Partner Address',
+                  title: { value: 'businesspartner' }
+    },
+    presentationVariant: [{ sortOrder: [{ by: 'businesspartner', direction: #ASC }] }]
+}
+annotate entity ZCS_RAP_BP_ADDRESS with
+{
+  @UI.facet          : [
+  {id                : 'Business Partner',
+  purpose            : #STANDARD,
+  position           : 10,
+  label              : 'BPAddress',
+  type               : #IDENTIFICATION_REFERENCE
+  }
+  ]
+
+  @UI.selectionField: [{ position: 10 }]
+  @UI.lineItem       : [{ position: 10 }]
+  @UI.identification : [{ position: 10 }]
+  @EndUserText.label: 'Business Partner'
+  businesspartner;
+
+  @UI.lineItem       : [{ position: 20 }]
+  @UI.identification : [{ position: 20 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Address Id'
+  addressid;
+
+  @UI.lineItem       : [{ position: 30 }]
+  @UI.identification : [{ position: 30 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Address Representation code'
+  addressrepresentationcode;
+
+  @UI.lineItem       : [{ position: 40 }]
+  @UI.identification : [{ position: 40 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Addressee Fullname'
+  addresseefullname;
+
+  @UI.lineItem       : [{ position: 50 }]
+  @UI.identification : [{ position: 50 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Address Id by External system'
+  addressidbyexternalsystem;
+
+  @UI.lineItem       : [{ position: 60 }]
+  @UI.identification : [{ position: 60 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Address Person Id'
+  addresspersonid;
+
+  @UI.lineItem       : [{ position: 70 }]
+  @UI.identification : [{ position: 70 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Address Search term 1'
+  addresssearchterm1;
+
+  @UI.lineItem       : [{ position: 80 }]
+  @UI.identification : [{ position: 80 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Address Search term 2'
+  addresssearchterm2;
+
+  @UI.lineItem       : [{ position: 90 }]
+  @UI.identification : [{ position: 90 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Address time zone'
+  addresstimezone;
+
+  @UI.lineItem       : [{ position: 110 }]
+  @UI.identification : [{ position: 110 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Care of name'
+  careofname;
+
+  @UI.lineItem       : [{ position: 120 }]
+  @UI.identification : [{ position: 120 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'City name'
+  cityname;
+
+  @UI.lineItem       : [{ position: 130 }]
+  @UI.identification : [{ position: 130 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'City number'
+  citynumber;
+
+  @UI.lineItem       : [{ position: 140 }]
+  @UI.identification : [{ position: 140 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Company postal code'
+  companypostalcode;
+
+  @UI.selectionField: [{ position: 150 }]
+  @UI.lineItem       : [{ position: 150 }]
+  @UI.identification : [{ position: 150 }]
+  @EndUserText.label: 'Country'
+  country;
+
+  @UI.lineItem       : [{ position: 160 }]
+  @UI.identification : [{ position: 160 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Delivery service number'
+  deliveryservicenumber;
+
+  @UI.lineItem       : [{ position: 170 }]
+  @UI.identification : [{ position: 170 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Delivery service type code'
+  deliveryservicetypecode;
+
+  @UI.lineItem       : [{ position: 180 }]
+  @UI.identification : [{ position: 180 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'District name'
+  districtname;
+
+  @UI.lineItem       : [{ position: 190 }]
+  @UI.identification : [{ position: 190 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Form of address'
+  formofaddress;
+
+  @UI.lineItem       : [{ position: 200 }]
+  @UI.identification : [{ position: 200 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'House number'
+  housenumber;
+
+  @UI.lineItem       : [{ position: 210 }]
+  @UI.identification : [{ position: 210 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'House number supplement text'
+  housenumbersupplementtext;
+
+  @UI.lineItem       : [{ position: 220 }]
+  @UI.identification : [{ position: 220 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Language'
+  language;
+
+  @UI.lineItem       : [{ position: 230 }]
+  @UI.identification : [{ position: 230 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Organization name 1'
+  organizationname1;
+
+  @UI.lineItem       : [{ position: 240 }]
+  @UI.identification : [{ position: 240 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Organization name 2'
+  organizationname2;
+
+  @UI.lineItem       : [{ position: 250 }]
+  @UI.identification : [{ position: 250 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Organization name 3'
+  organizationname3;
+
+  @UI.lineItem       : [{ position: 260 }]
+  @UI.identification : [{ position: 260 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Organization name 4'
+  organizationname4;
+
+  @UI.lineItem       : [{ position: 270 }]
+  @UI.identification : [{ position: 270 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Person family name'
+  personfamilyname;
+
+  @UI.lineItem       : [{ position: 280 }]
+  @UI.identification : [{ position: 280 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Person given name'
+  persongivenname;
+
+  @UI.lineItem       : [{ position: 290 }]
+  @UI.identification : [{ position: 290 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Pobox'
+  pobox;
+
+  @UI.lineItem       : [{ position: 300 }]
+  @UI.identification : [{ position: 300 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Pobox deviating city name'
+  poboxdeviatingcityname;
+
+  @UI.lineItem       : [{ position: 310 }]
+  @UI.identification : [{ position: 310 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Pobox deviating country'
+  poboxdeviatingcountry;
+
+  @UI.lineItem       : [{ position: 320 }]
+  @UI.identification : [{ position: 320 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Pobox deviating region'
+  poboxdeviatingregion;
+
+  @UI.lineItem       : [{ position: 330 }]
+  @UI.identification : [{ position: 330 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Pobox is without number'
+  poboxiswithoutnumber;
+
+  @UI.lineItem       : [{ position: 340 }]
+  @UI.identification : [{ position: 340 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Pobox lobby name'
+  poboxlobbyname;
+
+  @UI.lineItem       : [{ position: 350 }]
+  @UI.identification : [{ position: 350 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Pobox postal code'
+  poboxpostalcode;
+
+  @UI.lineItem       : [{ position: 360 }]
+  @UI.identification : [{ position: 360 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Postal code'
+  postalcode;
+
+  @UI.lineItem       : [{ position: 370 }]
+  @UI.identification : [{ position: 370 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Prfrd commmedium type'
+  prfrdcommmediumtype;
+
+  @UI.lineItem       : [{ position: 380 }]
+  @UI.identification : [{ position: 380 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Region'
+  region;
+
+  @UI.lineItem       : [{ position: 390 }]
+  @UI.identification : [{ position: 390 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Secondary region'
+  secondaryregion;
+
+  @UI.lineItem       : [{ position: 400 }]
+  @UI.identification : [{ position: 400 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Secondary region name'
+  secondaryregionname;
+
+  @UI.lineItem       : [{ position: 410 }]
+  @UI.identification : [{ position: 410 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Street name'
+  streetname;
+
+  @UI.lineItem       : [{ position: 420 }]
+  @UI.identification : [{ position: 420 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Street prefix name 1'
+  streetprefixname1;
+
+  @UI.lineItem       : [{ position: 430 }]
+  @UI.identification : [{ position: 430 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Street prefix name 2'
+  streetprefixname2;
+
+  @UI.lineItem       : [{ position: 440 }]
+  @UI.identification : [{ position: 440 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Street suffix name 1'
+  streetsuffixname1;
+
+  @UI.lineItem       : [{ position: 450 }]
+  @UI.identification : [{ position: 450 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Street suffix name 2'
+  streetsuffixname2;
+
+  @UI.lineItem       : [{ position: 460 }]
+  @UI.identification : [{ position: 460 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Taxjuris diction'
+  taxjurisdiction;
+
+  @UI.lineItem       : [{ position: 470 }]
+  @UI.identification : [{ position: 470 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Tertiary region'
+  tertiaryregion;
+
+  @UI.lineItem       : [{ position: 480 }]
+  @UI.identification : [{ position: 480 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Tertiary region name'
+  tertiaryregionname;
+
+  @UI.lineItem       : [{ position: 490 }]
+  @UI.identification : [{ position: 490 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Transport zone'
+  transportzone;
+
+  @UI.lineItem       : [{ position: 500 }]
+  @UI.identification : [{ position: 500 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Village name'
+  villagename;
+
+}

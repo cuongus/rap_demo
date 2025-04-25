@@ -1,0 +1,4 @@
+@EndUserText.label: 'Log tích hợp TCV Bank'
+define service ZSD_LOG_TCV_API_BANK {
+  expose ZC_RAP_LOG_TCVBANK;
+}

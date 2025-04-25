@@ -1,0 +1,33 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Send Payment Request",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zrapvtbpaym"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_360C241DB06CFB986F620174559DAA43F5823770_TM",
+    "semanticObject": "zrap_vtb_paym",
+    "action": "vtb-paym",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_360C241DB06CFB986F620174559DAA43F5823770_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Send Payment Request"
+      }
+    }
+  ]
+}

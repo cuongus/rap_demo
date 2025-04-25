@@ -1,0 +1,33 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Log Auth TCV Bank",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zraplogauthbank"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_E152B6A8EE9196208275C4ED9BFE84F0B688C531_TM",
+    "semanticObject": "zraptcvauthbank",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_E152B6A8EE9196208275C4ED9BFE84F0B688C531_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Log Auth TCV Bank"
+      }
+    }
+  ]
+}

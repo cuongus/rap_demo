@@ -1,0 +1,33 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "TCV Config Auth API Bank",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zrapcfauthbank"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_34E1F8E4ACD8D1C47599A7A94312E9FED2CC32A6_TM",
+    "semanticObject": "zraptcvcfauthba",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_34E1F8E4ACD8D1C47599A7A94312E9FED2CC32A6_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "TCV Config Auth API Bank"
+      }
+    }
+  ]
+}

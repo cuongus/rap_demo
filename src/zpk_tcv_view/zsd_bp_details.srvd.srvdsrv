@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition get BP Details'
+define service ZSD_BP_DETAILS {
+  expose ZCS_RAP_BP_ADDRESS;
+}

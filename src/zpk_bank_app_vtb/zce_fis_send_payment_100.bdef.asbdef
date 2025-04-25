@@ -1,0 +1,33 @@
+unmanaged implementation in class zbp_ce_fis_send_payment_100 unique;
+//strict ( 2 ); //Uncomment this line in order to enable strict mode 2. The strict mode has two variants (strict(1), strict(2)) and is prerequisite to be future proof regarding syntax and to be able to release your BO.
+strict;
+define behavior for ZCE_FIS_SEND_PAYMENT_100 //alias <alias_name>
+//late numbering
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+//  create;
+   update ( features : instance );
+//  delete;
+  action ( features : instance ) request_payment parameter ZA_ACCOUNT_AUTH_BANK;
+  action ( features : instance ) edit_text parameter ZA_FIS_PAYMENT_100;
+  field ( readonly ) PaymentRunDate, PaymentRunID, PostingDate, PayingCompanyCode, status, AccountByShipper, PaymentDocument,
+  payeepaymentsystem, payeealiastype, payeealiasname, created_by, created_by_fullname, message, api_status,
+  json_body, supplier, customer, paymentrecipient, financialaccounttype, sendingcompanycode, businessarea, paymentreason,
+  branchcode, directdebittype, paymentduedate, paymentrequestpaymentgroup, numberoftextlines, numberofpaiditems,
+  companycodecountry, paymentmethod, paymentmethodsupplement, paymentreference, personnelnumber, paymentorder, valuedate, exchangerate, paymentorigin,
+  businessplace, accountingclerk, addressid, country, region, cityname, streetaddressname, postalcode, pobox, poboxpostalcode, poboxdeviatingcityname,
+   organizationbpname1, organizationbpname2, organizationbpname3, organizationbpname4, bankcontrolkey,
+  bankcountry, bank, bankinternalid, bankaccount, bankaccountlongid, iban, housebank, housebankaccount, payeetitle, payeelanguage, payeename, payeeadditionalname,
+  payeecountry, payeeregion, payeecityname, payeedistrictname, payeestreet, payeepostalcode, payeepobox, payeepoboxpostalcode, payeebankcontrolkey, payeebankcountry,
+  payeebank, payeebankkey, payeebankaccount, payeebankaccountlongid, payeesepasequencetype, payeesepamandateuuid, payeeiban, payeebankdetailreference,
+  payeebankaccountholdername, paymentcurrency, paymentamountinpaytcurrency, lostcashdiscountinpaytcrcy, companycodecurrency,
+  cashdiscountamtincocodecrcy, paytamountincocodecurrency, lostcashdiscountincocodecrcy, functionalcurrency, paymentamountinfunctionalcrcy,
+  cashdiscountamountinfuncnlcrcy, additionalcurrency1, paymentamountinadditionalcrcy1, cashdiscountamtinaddlcrcy1, additionalcurrency2,
+  paymentamountinadditionalcrcy2, cashdiscountamtinaddlcrcy2, edipaymentorderstatus, edipaymentadvicestatus,
+  bankchainbank1type, bankchainbank1country, bankchainbank1, bankchainbank1bankaccount, bankchainbank1controlkey,
+  bankchainbank1detailreference, bankchainbank1iban, bankchainbank2type, bankchainbank2country, bankchainbank2,
+  bankchainbank2bankaccount, bankchainbank2controlkey, bankchainbank2detailreference, bankchainbank2iban, bankchainbank3type,
+  bankchainbank3country, bankchainbank3, bankchainbank3bankaccount, bankchainbank3controlkey, bankchainbank3detailreference, bankchainbank3iban;
+}

@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition Payment'
+define service ZSD_SEND_PAYMENT_100 {
+  expose ZCE_FIS_SEND_PAYMENT_100;
+}

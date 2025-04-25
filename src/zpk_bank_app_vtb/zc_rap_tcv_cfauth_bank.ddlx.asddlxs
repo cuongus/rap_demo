@@ -1,0 +1,42 @@
+@Metadata.layer: #CORE
+
+@UI:{
+    headerInfo: { typeName: 'Config API AUTH Bank',
+                  typeNamePlural: 'Config API AUTH Bank',
+                  title: { type: #STANDARD, label: 'Parameter', value: 'Param' },
+                  description: { value: 'Value'}
+    },
+    presentationVariant: [{ sortOrder: [{ by: 'Lastchangedat', direction: #ASC }, { by: 'Locallastchangedat', direction: #ASC }] }]
+}
+
+annotate view ZC_RAP_TCV_CFAUTH_BANK with
+{
+
+  @UI.facet          : [{id : 'General',
+           purpose: #STANDARD,
+           position: 10,
+           label : 'General',
+           type  : #IDENTIFICATION_REFERENCE
+           }
+           ]
+  @UI.lineItem       : [{ position: 10 }]
+  @UI.identification : [{ position: 10 }]
+  @EndUserText.label: 'Parameter'
+  Param;
+  @UI.lineItem       : [{ position: 20 }]
+  @UI.identification : [{ position: 20 }]
+  @EndUserText.label: 'Value'
+  Value;
+  @UI.lineItem       : [{ position: 30 }]
+  @UI.identification : [{ position: 30 }]
+  @EndUserText.label: 'Created By'
+  Locallastchangedby;
+  @UI.lineItem       : [{ position: 40 }]
+  @UI.identification : [{ position: 40 }]
+  @EndUserText.label: 'Created At'
+  Locallastchangedat;
+
+  @UI.hidden: true
+  Lastchangedat;
+
+}

@@ -1,0 +1,33 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Config Router Bank API",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zconfigroute"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_1045BE9D73CC78056A41FE8F7C2FAAF278B599A3_TM",
+    "semanticObject": "z_config_route",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_1045BE9D73CC78056A41FE8F7C2FAAF278B599A3_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Config Router Bank API"
+      }
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>ZMINV</ARBGB>
+    <MASTERLANG>E</MASTERLANG>
+    <STEXT>Message Class For TCV EInvoices</STEXT>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMINV</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>Config Username Password</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMINV</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>Config Form Serial EInovices for Fiscalyear</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMINV</ARBGB>
+     <MSGNR>003</MSGNR>
+     <TEXT>Chứng từ &amp;1 năm &amp;2 không thỏa mãn điều kiện thực hiện điều chỉnh</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMINV</ARBGB>
+     <MSGNR>004</MSGNR>
+     <TEXT>Không điều chỉnh chứng từ khác loại tiền tệ</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMINV</ARBGB>
+     <MSGNR>005</MSGNR>
+     <TEXT>Không thực hiện điều chỉnh chứng từ đã bị thay thế</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMINV</ARBGB>
+     <MSGNR>006</MSGNR>
+     <TEXT>Nhập đầy đủ thông tin hoặc không nhập thông tin điều chỉnh</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMINV</ARBGB>
+     <MSGNR>007</MSGNR>
+     <TEXT>Trường hợp thay thế cần hủy chứng từ gốc &amp;1 - &amp;2</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMINV</ARBGB>
+     <MSGNR>008</MSGNR>
+     <TEXT>Hủy chứng từ &amp;1 - &amp;2 trước khi hủy hóa đơn</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMINV</ARBGB>
+     <MSGNR>009</MSGNR>
+     <TEXT>Trạng thái chứng từ &amp;1 - &amp;2 không thể phát hành</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMINV</ARBGB>
+     <MSGNR>010</MSGNR>
+     <TEXT>Trạng thái chứng từ không thể thay thế</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMINV</ARBGB>
+     <MSGNR>777</MSGNR>
+     <TEXT>You are not authority!</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>

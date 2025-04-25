@@ -1,0 +1,33 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "One Time Data for Customer Items",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zraponetimecus"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_7E9FE23B6F1D49831F4E198A5FBB51BDF397720C_TM",
+    "semanticObject": "zrap_onetimecus",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_7E9FE23B6F1D49831F4E198A5FBB51BDF397720C_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "One Time Data for Customer Items"
+      }
+    }
+  ]
+}

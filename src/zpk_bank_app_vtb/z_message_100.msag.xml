@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>Z_MESSAGE_100</ARBGB>
+    <MASTERLANG>E</MASTERLANG>
+    <STEXT>Message payment</STEXT>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>Z_MESSAGE_100</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>Insert Payment &amp;1 Success</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>Z_MESSAGE_100</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>Your changes have been saved.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>Z_MESSAGE_100</ARBGB>
+     <MSGNR>003</MSGNR>
+     <TEXT>Text of Payment was edited (Run date: &amp;2; ID: &amp;1)</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>Z_MESSAGE_100</ARBGB>
+     <MSGNR>004</MSGNR>
+     <TEXT>Please fill text in &amp;1 on &amp;2</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>Z_MESSAGE_100</ARBGB>
+     <MSGNR>005</MSGNR>
+     <TEXT>&amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>Z_MESSAGE_100</ARBGB>
+     <MSGNR>006</MSGNR>
+     <TEXT>Payment was posted successfully</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>Z_MESSAGE_100</ARBGB>
+     <MSGNR>007</MSGNR>
+     <TEXT>Payment has Status Posted successfully can&apos;t be edited text</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>Z_MESSAGE_100</ARBGB>
+     <MSGNR>008</MSGNR>
+     <TEXT>Only accept letters, digits, or special characters like ,#!%&amp;1-_;./+ : &quot;=</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>Z_MESSAGE_100</ARBGB>
+     <MSGNR>009</MSGNR>
+     <TEXT>The transaction content has a maximum length of up to 192 characters.</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>

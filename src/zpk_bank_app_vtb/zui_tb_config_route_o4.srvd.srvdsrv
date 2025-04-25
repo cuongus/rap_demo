@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_TB_CONFIG_ROUTE'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_TB_CONFIG_ROUTE'
+  }
+}
+define service ZUI_TB_CONFIG_ROUTE_O4 provider contracts odata_v4_ui {
+  expose ZC_TB_CONFIG_ROUTE;
+}

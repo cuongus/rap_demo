@@ -1,0 +1,229 @@
+@Metadata.layer: #CORE
+@UI:{
+    headerInfo: { typeName: 'Document Number',
+                  typeNamePlural: 'Document Number',
+                  title: { value: 'Accountingdocument' }
+    },
+    presentationVariant: [{ sortOrder: [{ by: 'Accountingdocument', direction: #ASC }] }]
+}
+annotate view ZI_SH_DOCUMENRT_ADJ with
+//  parameters
+//    @EndUserText.label: 'Company code'
+//    p_bukrs,
+//    @EndUserText.label: 'Region'
+//    p_region
+{
+  @UI.facet          : [
+  {
+  id                 : 'General',
+  purpose            : #STANDARD,
+  position           : 10,
+  label              : 'General',
+  type               : #IDENTIFICATION_REFERENCE
+  }]
+
+  @UI.selectionField: [{ position: 10 }]
+  @UI.lineItem       : [{ position: 10 }]
+  @UI.identification : [{ position: 10 }]
+  Companycode;
+
+  @UI.selectionField: [{ position: 30 }]
+  @UI.lineItem       : [{ position: 20 }]
+  @UI.identification : [{ position: 20 }]
+  Accountingdocument;
+  
+  @UI.selectionField: [{ position: 30 }]
+  @UI.lineItem       : [{ position: 30 }]
+  @UI.identification : [{ position: 30 }]
+  Fiscalyear;
+  @UI.selectionField: [{ position: 40 }]
+  @UI.lineItem       : [{ position: 40 }]
+  @UI.identification : [{ position: 40 }]
+  Fiscalperiod;
+  @UI.selectionField: [{ position: 50 }]
+  @UI.lineItem       : [{ position: 50 }]
+  @UI.identification : [{ position: 50 }]
+  Postingdate;
+  @UI.selectionField: [{ position: 60 }]
+  @UI.lineItem       : [{ position: 60 }]
+  @UI.identification : [{ position: 60 }]
+  Documentdate;
+  @UI.selectionField: [{ position: 70 }]
+  @UI.lineItem       : [{ position: 70 }]
+  @UI.identification : [{ position: 70 }]
+  Entrydate;
+  @UI.selectionField: [{ position: 80 }]
+  @UI.lineItem       : [{ position: 80 }]
+  @UI.identification : [{ position: 80 }]
+  Doctype;
+  @UI.selectionField: [{ position: 90 }]
+  @UI.lineItem       : [{ position: 90 }]
+  @UI.identification : [{ position: 90 }]
+  Exchangerate;
+  @UI.selectionField: [{ position: 100 }]
+  @UI.lineItem       : [{ position: 100 }]
+  @UI.identification : [{ position: 100 }]
+  Taxcode;
+  @UI.selectionField: [{ position: 110 }]
+  @UI.lineItem       : [{ position: 110 }]
+  @UI.identification : [{ position: 110 }]
+  Customer;
+  @UI.selectionField: [{ position: 120 }]
+  @UI.lineItem       : [{ position: 120 }]
+  @UI.identification : [{ position: 120 }]
+  @EndUserText.label: 'Customer Name'
+  Bname;
+  @UI.selectionField: [{ position: 130 }]
+  @UI.lineItem       : [{ position: 130 }]
+  @UI.identification : [{ position: 130 }]
+  @EndUserText.label: 'Customer Address'
+  Baddr;
+  @UI.selectionField: [{ position: 140 }]
+  @UI.lineItem       : [{ position: 140 }]
+  @UI.identification : [{ position: 140 }]
+  @EndUserText.label: 'Profit center'
+  Profitcenter;
+  //  @UI.selectionField: [{ position: 150 }]
+  @UI.lineItem       : [{ position: 150 }]
+  @UI.identification : [{ position: 150 }]
+  Region;
+  @UI.hidden: true
+  Regiontext;
+  @UI.selectionField: [{ position: 160 }]
+  @UI.lineItem       : [{ position: 160 }]
+  @UI.identification : [{ position: 160 }]
+  Usertype;
+  @UI.hidden: true
+  Usertypetext;
+  @UI.hidden: true
+  Etype;
+  @UI.hidden: true
+  Form;
+  @UI.selectionField: [{ position: 170 }]
+  @UI.lineItem       : [{ position: 170 }]
+  @UI.identification : [{ position: 170 }]
+  Serial;
+  @UI.selectionField: [{ position: 180 }]
+  @UI.lineItem       : [{ position: 180 }]
+  @UI.identification : [{ position: 180 }]
+  Seq;
+  @UI.hidden: true
+  Dateint;
+  @UI.selectionField: [{ position: 190 }]
+  @UI.lineItem       : [{ position: 190 }]
+  @UI.identification : [{ position: 190 }]
+  @EndUserText.label: 'Date Issuance'
+  Dateiss;
+  @UI.selectionField: [{ position: 200 }]
+  @UI.lineItem       : [{ position: 200 }]
+  @UI.identification : [{ position: 200 }]
+  @EndUserText.label: 'Time Issuance'
+  Timeiss;
+  @UI.hidden: true
+  Datecanc;
+  @UI.hidden: true
+  Sid;
+  @UI.selectionField: [{ position: 210 }]
+  @UI.lineItem       : [{ position: 210 }]
+  @UI.identification : [{ position: 210 }]
+  Stax;
+  @UI.hidden: true
+  Mscqt;
+  @UI.hidden: true
+  Link;
+  @UI.selectionField: [{ position: 220 }]
+  @UI.lineItem       : [{ position: 220 }]
+  @UI.identification : [{ position: 220 }]
+  Adjtype;
+  @UI.hidden: true
+  Adjtext;
+  @UI.selectionField: [{ position: 230 }]
+  @UI.lineItem       : [{ position: 230 }]
+  @UI.identification : [{ position: 230 }]
+  @EndUserText.label: 'Source Document'
+  Belnrsrc;
+  @UI.selectionField: [{ position: 240 }]
+  @UI.lineItem       : [{ position: 240 }]
+  @UI.identification : [{ position: 240 }]
+  @EndUserText.label: 'Source Fiscal Year'
+  Gjahrsrc;
+  @UI.selectionField: [{ position: 250 }]
+  @UI.lineItem       : [{ position: 250 }]
+  @UI.identification : [{ position: 250 }]
+  Statussap;
+  @UI.hidden: true
+  Statusinv;
+  @UI.hidden: true
+  Statuscqt;
+  @UI.selectionField: [{ position: 260 }]
+  @UI.lineItem       : [{ position: 260 }]
+  @UI.identification : [{ position: 260 }]
+  Msgty;
+  @UI.selectionField: [{ position: 270 }]
+  @UI.lineItem       : [{ position: 270 }]
+  @UI.identification : [{ position: 270 }]
+  Msgtx;
+  @UI.selectionField: [{ position: 280 }]
+  @UI.lineItem       : [{ position: 280 }]
+  @UI.identification : [{ position: 280 }]
+  Paym;
+  @UI.selectionField: [{ position: 290 }]
+  @UI.lineItem       : [{ position: 290 }]
+  @UI.identification : [{ position: 290 }]
+  Currency;
+  @UI.selectionField: [{ position: 300 }]
+  @UI.lineItem       : [{ position: 300 }]
+  @UI.identification : [{ position: 300 }]
+  @EndUserText.label: 'Curency Amount'
+  Amount;
+  @UI.selectionField: [{ position: 310 }]
+  @UI.lineItem       : [{ position: 310 }]
+  @UI.identification : [{ position: 310 }]
+  @EndUserText.label: 'Curency VAT'
+  Vat;
+  @UI.selectionField: [{ position: 320 }]
+  @UI.lineItem       : [{ position: 320 }]
+  @UI.identification : [{ position: 320 }]
+  @EndUserText.label: 'Curency Total'
+  Total;
+  @UI.selectionField: [{ position: 330 }]
+  @UI.lineItem       : [{ position: 330 }]
+  @UI.identification : [{ position: 330 }]
+  @EndUserText.label: 'Local Amount'
+  Amountv;
+  @UI.selectionField: [{ position: 340 }]
+  @UI.lineItem       : [{ position: 340 }]
+  @UI.identification : [{ position: 340 }]
+  @EndUserText.label: 'Local VAT'
+  Vatv;
+  @UI.selectionField: [{ position: 350 }]
+  @UI.lineItem       : [{ position: 350 }]
+  @UI.identification : [{ position: 350 }]
+  @EndUserText.label: 'Local Total'
+  Totalv;
+  @UI.selectionField: [{ position: 360 }]
+  @UI.lineItem       : [{ position: 360 }]
+  @UI.identification : [{ position: 360 }]
+  Invdat;
+  @UI.selectionField: [{ position: 370 }]
+  @UI.lineItem       : [{ position: 370 }]
+  @UI.identification : [{ position: 370 }]
+  Createdby;
+  @UI.selectionField: [{ position: 380 }]
+  @UI.lineItem       : [{ position: 380 }]
+  @UI.identification : [{ position: 380 }]
+  Createdon;
+  @UI.hidden: true
+  Stblg;
+  @UI.hidden: true
+  Stjah;
+  @UI.hidden: true
+  Xreversing;
+  @UI.hidden: true
+  Xreversed;
+  @UI.hidden: true
+  Locallastchangedby;
+  @UI.hidden: true
+  Lastchangedat;
+
+}

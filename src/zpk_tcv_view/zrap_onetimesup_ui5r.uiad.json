@@ -1,0 +1,33 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "One Time Data for Supplier Items",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zraponetimesupp"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_BBBFCAB835B2097DE5AD6F8A22F1B9B43624E187_TM",
+    "semanticObject": "zrap_onetimesup",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_BBBFCAB835B2097DE5AD6F8A22F1B9B43624E187_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "One Time Data for Supplier Items"
+      }
+    }
+  ]
+}

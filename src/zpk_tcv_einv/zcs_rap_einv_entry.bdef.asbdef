@@ -1,0 +1,130 @@
+unmanaged implementation in class zbp_cs_rap_einv_entry unique;
+strict ( 2 ); //Uncomment this line in order to enable strict mode 2. The strict mode has two variants (strict(1), strict(2)) and is prerequisite to be future proof regarding syntax and to be able to release your BO.
+
+define behavior for ZCS_RAP_EINV_ENTRY alias CSEInvoiceEntry
+//late numbering
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  field ( readonly ) companycode, accountingdocument, fiscalyear;
+  association _EInvoiceItems { create; }
+
+  action ( features : instance ) InteEINV parameter zr_integration_einv result [1] $self;
+  action ( features : instance ) CancelEINV parameter zr_cancel_einv result [1] $self;
+  action ( features : instance ) SearchEINV result [1] $self;
+  action ( features : instance ) AdjustEINV parameter zr_adjust_einv result [1] $self;
+  action ( features : instance ) ReplaceEINV parameter zr_replace_einv result [1] $self;
+
+  mapping for zrap_einv_entry
+    {
+      companycode        = companycode;
+      accountingdocument = accountingdocument;
+      fiscalyear         = fiscalyear;
+      iconsap            = iconsap;
+      postingdate        = postingdate;
+      documentdate       = documentdate;
+      entrydate          = entrydate;
+      doctype            = doctype;
+      exchangerate       = exchangerate;
+      taxcode            = taxcode;
+      customer           = customer;
+      bname              = bname;
+      baddr              = baddr;
+      bbank              = bbank;
+      bacct              = bacct;
+      btax               = btax;
+      bmail              = bmail;
+      btel               = btel;
+      region             = region;
+      regiontext         = regiontext;
+      profitcenter       = profitcenter;
+      usertype           = usertype;
+      usertypetext       = usertypetext;
+      etype              = etype;
+      form               = form;
+      serial             = serial;
+      seq                = seq;
+      dateint            = dateint;
+      dateiss            = dateiss;
+      timeiss            = timeiss;
+      datecanc           = datecanc;
+      sid                = sid;
+      zsearch            = zsearch;
+      zreplace           = zreplace;
+      startdat           = startdat;
+      enddat             = enddat;
+      stax               = stax;
+      mscqt              = mscqt;
+      link               = link;
+      adjtype            = adjtype;
+      belnrsrc           = belnrsrc;
+      gjahrsrc           = gjahrsrc;
+      statussap          = statussap;
+      statusinv          = statusinv;
+      statuscqt          = statuscqt;
+      msgty              = msgty;
+      msgtx              = msgtx;
+      paym               = paym;
+      currency           = currency;
+      amount             = amount;
+      vat                = vat;
+      total              = total;
+      amountv            = amountv;
+      vatv               = vatv;
+      totalv             = totalv;
+      invdat             = invdat;
+      createdby          = createdby;
+      createdon          = createdon;
+      stblg              = stblg;
+      stjah              = stjah;
+      xreversing         = xreversing;
+      xreversed          = xreversed;
+      locallastchangedby = locallastchangedby;
+      locallastchangedat = locallastchangedat;
+      lastchangedat      = lastchangedat;
+    }
+}
+
+define behavior for ZCS_RAP_EINV_ITEM alias CSEInvoiceItem
+//late numbering
+lock dependent by _EInvoicesHeader
+authorization dependent by _EInvoicesHeader
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly ) companycode, accountingdocument, fiscalyear, buzei;
+  association _EInvoicesHeader;
+
+  mapping for zrap_einv_item
+    {
+      companycode        = companycode;
+      accountingdocument = accountingdocument;
+      fiscalyear         = fiscalyear;
+      buzei              = buzei;
+      material           = material;
+      itemname           = itemname;
+      noted              = noted;
+      taxcode            = taxcode;
+      taxpercentage      = taxpercentage;
+      quantity           = quantity;
+      baseunit           = baseunit;
+      unittext           = unittext;
+      price              = price;
+      currency           = currency;
+      amount             = amount;
+      vat                = vat;
+      total              = total;
+      pricev             = pricev;
+      amountv            = amountv;
+      vatv               = vatv;
+      totalv             = totalv;
+      lastchangedat      = lastchangedat;
+      locallastchangedat = locallastchangedat;
+      locallastchangedby = locallastchangedby;
+    }
+}

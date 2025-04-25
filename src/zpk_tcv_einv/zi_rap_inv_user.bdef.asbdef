@@ -1,0 +1,71 @@
+unmanaged implementation in class zbp_i_rap_inv_user unique;
+strict ( 2 );
+
+with draft;
+define behavior for ZI_RAP_INV_USER alias EInvoiceUser
+//late numbering
+draft table zrap_inv_user_d
+lock master total etag Lastchangedat
+authorization master ( instance )
+etag master Lastchangedat
+{
+  create;
+  update;
+  delete;
+
+  field ( mandatory : create ) Companycode, Usertype;
+  field ( readonly : update ) Companycode, Usertype, Username, Maskpassword, Sellertax;
+  field ( readonly ) Password;
+
+  association _EInvoiceSerial { create; with draft; }
+
+  draft action Edit;
+  draft action Activate;
+  draft action Discard;
+  draft action Resume;
+
+  draft determine action Prepare;
+
+  mapping for zrap_inv_user
+    {
+      Companycode        = companycode;
+      Usertype           = usertype;
+      Username           = username;
+      Maskpassword       = maskpassword;
+      Password           = password;
+      Sellertax          = sellertax;
+      Locallastchangedby = locallastchangedby;
+      Locallastchangedat = locallastchangedat;
+      Lastchangedat      = lastchangedat;
+    }
+
+}
+
+define behavior for ZI_RAP_INV_SERIAL alias EInvoiceSerial
+//late numbering
+draft table zrap_inv_seri_d
+lock dependent by _EInvoiceUser
+authorization dependent by _EInvoiceUser
+etag dependent by _EInvoiceUser
+{
+  update;
+  delete;
+
+  field ( readonly ) Companycode, Usertype;
+  field ( mandatory : create ) Fiscalyear, Etype;
+  field ( readonly : update ) Datetype, Form, Serial;
+
+  association _EInvoiceUser { with draft; }
+
+
+  mapping for zrap_inv_serial
+    {
+      Companycode = companycode;
+      Usertype    = usertype;
+      Fiscalyear  = fiscalyear;
+      Etype       = etype;
+      Datetype    = datetype;
+      Form        = form;
+      Serial      = serial;
+    }
+}

@@ -1,0 +1,33 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Business Partner Address",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zrapbpaddress"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_06EA6137AD0581CE99212274D01E06DCFF0D0CB6_TM",
+    "semanticObject": "zrap_bp_address",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_06EA6137AD0581CE99212274D01E06DCFF0D0CB6_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Business Partner Address"
+      }
+    }
+  ]
+}

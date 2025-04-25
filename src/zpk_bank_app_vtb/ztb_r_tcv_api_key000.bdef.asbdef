@@ -1,0 +1,14 @@
+unmanaged implementation in class zbp_tb_r_tcv_api_key000 unique;
+strict ( 2 );
+
+define behavior for ZTB_R_TCV_API_KEY000 //alias <alias_name>
+//late numbering
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  field ( readonly ) IsActive, CreatedAt, CreatedBy;
+}

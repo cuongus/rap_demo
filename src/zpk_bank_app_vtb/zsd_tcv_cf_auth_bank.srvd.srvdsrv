@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition'
+define service ZSD_TCV_CF_AUTH_BANK {
+  expose ZC_RAP_TCV_CFAUTH_BANK;
+}
